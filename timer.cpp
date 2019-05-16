@@ -12,9 +12,9 @@ private:
 
 public:
 	Clock(int h, int m, int s);
-	void set(int h, int m, int s);
-	void run_through_sleep();
-	void run_through_caculate();
+	void set(int h, int m, int s);	
+	void run_through_sleep();		//通过sleep的方式计时
+	void run_through_caculate();	//通过运算的方式计时
 	void show(); 	//show Clock which is set
 	string getTime();
 };
@@ -69,19 +69,21 @@ void Clock::run_through_caculate()
 	while(hour || minute || second)	//设置程序结束
 	{
 	    sleep(1);//等待1S
-	    if(--second < 0)
+
+	    //s 走完了 m-1。如果m 已经为0 则h-1 如果h没有就说明 0 0 0了
+	    if(--second < 0)	//如果s到了0  没到就跳过
 	    {
-	        second = 59;
-	        if(--minute < 0)
+	        second = 59;	//将s设为59
+	        if(--minute < 0)	//判断分钟有没有到0 没到就跳过分钟位置的变化
 	        {
-	          minute = 59;
+	          minute = 59;		//分钟到了0 就重新设置为59
 	          --hour;
 	        }
 	    }
     }
 
     //剩余时间
-    cout << "remainder==>"
+    cout << "remainder==>";
     Clock::show();
 
 	//输出结束计时时间
@@ -91,9 +93,19 @@ void Clock::run_through_caculate()
 int main()
 {
 	int hour, minute, second;
+
+	//提示输入倒计时时间
 	cout << "please input Clock: hour minute second" << endl;
+
+	//获取倒计时时间
 	cin>> hour >> minute >> second;
+
+	//Clock类实例化
 	Clock t(hour, minute, second);
-	t.run_through_caculate();
+
+	//允许
+	t.run_through_sleep();
+
+	
 	return 0;
 }
