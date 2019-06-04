@@ -19,6 +19,7 @@ ___
 =========
 =======
 ---
+>>>>>>> 77427005853e9dfc348cff527618d5065555dabf
 *__windows__
 ```javascript
 g++ timer.cpp -o timer.exe
