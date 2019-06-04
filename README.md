@@ -26,15 +26,14 @@ g++ timer.cpp -o timer.a
 //倒计时1小时1分钟1秒
 ./timer.a -c -H 1 -M 1 -S 1
 ```
-![TIMER](https://github.com/Lainton/Timer/raw/master/images/calculate.png)
+![TIMER](https://github.com/Lainton/Timer/tree/master/images/calculate.png)
 
 *不显示__剩余时间__模式（sleep 模式）
 ```javascript
 //倒计时1小时1分钟1秒
 ./timer.a -s -H 1 -M 1 -S 1
 ```
-![TIMER](https://github.com/Lainton/Timer/raw/master/images/sleep.png)
-
+![TIMER](https://github.com/Lainton/Timer/tree/master/images/sleep.png)
 
 
 
