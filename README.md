@@ -1,5 +1,5 @@
 Timer介绍
-_________
+---------
 
 timer是一个倒计时软件
 ===================
@@ -14,7 +14,7 @@ timer是一个倒计时软件
 ___
 1.编译软件
 =========
-=======
+
 *__windows__
 ```javascript
 g++ timer.cpp -o timer.exe
@@ -44,7 +44,7 @@ g++ timer.cpp -o timer.a
 
 
 快速上手
-_______
+-------
 ```javascript
   //compile
   g++ timer.cpp -o timer.a
