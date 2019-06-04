@@ -1,5 +1,7 @@
-#Timer介绍
-###timer是一个倒计时软件
+Timer介绍
+--------
+timer是一个倒计时软件
+==================
 
 提供命令行参数设置的方式
 
@@ -7,8 +9,10 @@
 
 提供显示剩余时间的模式（calculate）
 
-#使用
-##1.编译软件
+使用
+---
+1.编译软件
+=========
 
 *__windows__
 ```javascript
@@ -19,7 +23,8 @@ g++ timer.cpp -o timer.exe
 g++ timer.cpp -o timer.a
 ```
 
-##2.运行
+2.运行
+=====
 
 *剩余时间__剩余时间__模式（calculate 模式）
 ```javascript
@@ -37,7 +42,8 @@ g++ timer.cpp -o timer.a
 
 
 
-#快速上手
+快速上手
+------
 ```javascript
   //compile
   g++ timer.cpp -o timer.a
