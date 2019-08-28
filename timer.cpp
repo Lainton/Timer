@@ -108,6 +108,7 @@ void help()
 {
     cout<<"此程序用于倒计时"<<endl;
     cout<<"timer [-hscHMS]"<<endl;
+    cout<<"timer -c -H 2 -M 3 -S 3"<<endl;
     cout<<"\t-h help"<<endl;
     cout<<"\t-s run with sleep function(without display of time)"<<endl;
     cout<<"\t-c run with calculate function"<<endl;
@@ -153,7 +154,7 @@ public:
 cmdResolve::cmdResolve()
 {
     sleep = false;
-    calculate = false;
+    calculate = true;
     help = false;
     err = false;
     Hour = 0;
@@ -178,10 +179,12 @@ void cmdResolve::setPara(int argc, char *argv[])
             case 's':
                 cout<<"[!]running with [sleep] function"<<endl;
                 this->sleep = true;
+                this->calculate = false;
                 break;
             case 'c':
                 cout<<"[!]running with [calculate] function"<<endl;
-                this->calculate =true;
+                this->calculate = true;
+                this->sleep = false;
                 break;
             case 'h':
                 this->help = true;
